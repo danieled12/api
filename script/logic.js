@@ -1,5 +1,5 @@
 $(document).ready(function (){
-	
+
 	function search() {
 
 		var searchTerm = $('#search').val().toLowerCase();
@@ -7,7 +7,7 @@ $(document).ready(function (){
 		var movieHTML = "";
 		var movieModal = "";
 		$.ajax({
-			url: 'http://www.omdbapi.com/?s=' + searchTerm + '&r=json&apikey=7472ba75' + '&plot=full&r=json',
+			url: 'https://www.omdbapi.com/?s=' + searchTerm + '&r=json&apikey=7472ba75' + '&plot=full&r=json',
 			method: 'GET',
 			dataType: 'json',
 			success: function(data) {
@@ -40,7 +40,7 @@ $(document).ready(function (){
 					event.preventDefault();
 					var movieId = $(this).attr('id');
 					$.ajax({
-						url: 'http://www.omdbapi.com/?i=' +  movieId + '&r=json&apikey=7472ba75'+ '&plot=full&r=json',
+						url: 'https://www.omdbapi.com/?i=' +  movieId + '&r=json&apikey=7472ba75'+ '&plot=full&r=json',
 						method: 'GET',
 						dataType: 'json',
 						success: function(data) {
