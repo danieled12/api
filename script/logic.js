@@ -1,8 +1,6 @@
 $(document).ready(function (){
 
 	function search() {
-
-
 		var searchTerm = $('#search').val().toLowerCase();
 		var movieHTML = "";
 		var movieModal = "";
@@ -29,9 +27,8 @@ $(document).ready(function (){
 								movieModal += '<div class="modal-body">' + '<img src="' + movie.Poster + '"><br><br>IMDB Rating: ' + movie.imdbRating + '<br><br>Plot Synopsis:<br>' + movie.Plot + '</div>';
 								movieModal += '<div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button><a href="http://www.imdb.com/title/' + movie.imdbID +'" target="_blank"><button type="button" class="btn btn-primary">Link to IMDB</button></a></div></div></div></div>';
 						});
+
 					}
-
-
 			$('.movie-list').html(movieHTML);
 			$('.main-content').append(movieModal);
 
@@ -47,7 +44,7 @@ $(document).ready(function (){
 							console.log(movieId);
 								movieModal += '<div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">' + data.Title + ' (' + data.Year + ')' + '</h4></div>';
 								movieModal += '<div class="modal-body">' + '<img src="' + data.Poster + '"><br><br>IMDB Rating: ' + data.imdbRating + '<br><br>Plot Synopsis:<br>' + data.Plot + '</div>';
-								movieModal += '<div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button><a href="http://www.imdb.com/title/' + data.imdbID +'" target="_blank"></a></div></div></div>';
+								movieModal += '<div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button><a href="http://www.imdb.com/title/' + data.imdbID +'" target="_blank"><button type="button" class="btn btn-primary">Link to IMDB</button></a></div></div></div>';
 						$('.modal.fade#' + movieId).html(movieModal).modal('show');
 						$('.modal.fade#' + movieId).on('hidden.bs.modal', function (e) {
 							$('.modal-backdrop.in').remove();
@@ -73,4 +70,4 @@ $(document).ready(function (){
 			search();
 		}, 500);
 	});
-});
+}); 

@@ -1,12 +1,11 @@
-
-html {
+* {
   box-sizing: border-box;
 }
 
 body {
   font: 1em/1.5 'Roboto', sans-serif;
-  color: white;
-  background-image: url("../images/background.jpg");
+  color: #222;
+  background: url("../images/background2.jpg") no-repeat center center fixed;
   padding-top: 145px;
   padding-bottom: 3em;
   margin: 0;
@@ -98,6 +97,8 @@ input:focus {
   display: block;
 }
 
+/* MOVIE LIST COMPONENTS -------- */
+
 .no-movies  {
   color: #b0b0b0;
   height: 140px;
@@ -146,6 +147,10 @@ input:focus {
   margin: auto;
 }
 
+/* =================================
+  Layout Styles
+==================================== */
+
 .inner,
 .main-content {
   width: 90%;
@@ -163,6 +168,10 @@ input:focus {
   z-index: 1000;
 }
 
+/* =================================
+  Helper Classes
+==================================== */
+
 .clearfix::after {
   content: " ";
   display: table;
@@ -179,6 +188,10 @@ input:focus {
   position: absolute;
   width: 1px;
 }
+
+/* =================================
+  Media Queries
+==================================== */
 
 @media (min-width: 0) and (max-width: 549px) {
   .movie-list li {
